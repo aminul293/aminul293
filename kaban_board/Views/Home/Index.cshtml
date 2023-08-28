@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Kanban Board</title>
+   <style>
+       
+        body {
+            background-color: cadetblue;
+            font-family: Arial, sans-serif;
+        }
+
+        
+        .status-column {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 30%;
+            float: left;
+            margin: 10px;
+            background-color: lightgray;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-column h2 {
+            font-size: 1.2rem;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .task-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: lightgray;
+            border-radius: 5px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-card h3 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        
+        form {
+            margin-top: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-top: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+       
+        .edit-button,
+        .delete-button {
+            background-color: #337ab7;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .edit-button:hover,
+        .delete-button:hover {
+            background-color: #286090;
+        }
+
+        
+       
+    </style>
+</head>
+<body>
+    <div class="status-column" id="to-do-column">
+        <h2>To Do</h2>
+    </div>
+    <div class="status-column" id="doing-column">
+        <h2>Doing</h2>
+    </div>
+    <div class="status-column" id="done-column">
+        <h2>Done</h2>
+    </div>
+
+    <div class="task-card" data-task-id="1">
+        <h3>Task Title</h3>
+        <p>Task Description</p>
+    </div>
+
+    <form id="add-task-form">
+        <label for="title-input">Title:</label>
+        <input type="text" id="title-input" required>
+        <label for="description-input">Description:</label>
+        <textarea id="description-input" required></textarea>
+        <button type="submit">Add Task</button>
+    </form>
+    <div class="task-card" data-task-id="1">
+        <h3>Task Title</h3>
+        <p>Task Description</p>
+        <button class="edit-button">Edit</button>
+        <form class="edit-form">
+            <input type="text" class="edit-title-input" placeholder="New Title">
+            <textarea class="edit-description-input" placeholder="New Description"></textarea>
+            <button type="button" class="save-edit-button">Save</button>
+            <button type="button" class="cancel-edit-button">Cancel</button>
+        </form>
+    </div>
+
+
+    <div class="task-card" data-task-id="2">
+        <h3>Task Title</h3>
+        <p>Task Description</p>
+        <button class="edit-button">Edit</button>
+    </div>
+
+    <div class="task-card" data-task-id="3">
+        <h3>Task Title</h3>
+        <p>Task Description</p>
+        <button class="delete-button">Delete</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

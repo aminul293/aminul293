@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+    
+    .column {
+        width: 100%;
+    }
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Styles for columns and task cards */
+.status-column {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 30%;
+    float: left;
+    margin: 10px;
+}
+
+.task-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+
+    .task-card h3 {
+        margin-top: 0;
+    }
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .status-column {
+        width: 100%;
+    }
+}

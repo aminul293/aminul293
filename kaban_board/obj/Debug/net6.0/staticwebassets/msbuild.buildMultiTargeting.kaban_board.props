@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\kaban_board.props" />
+</Project>
